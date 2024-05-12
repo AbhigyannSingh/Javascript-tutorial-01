@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="start">Start</button>
+   <button id="stop">Stop</button>
+
+    <script>
+         let printingInterval;
+
+function startPrinting() {
+    printingInterval = setInterval(() => {
+        console.log('Printing...' , Date.now());
+    }, 1000); // Adjust the interval as needed
+}
+
+function stopPrinting() {
+    clearInterval(printingInterval);
+    console.log('Printing stopped.');
+}
+
+document.getElementById('start').addEventListener('click', startPrinting);
+document.getElementById('stop').addEventListener('click', stopPrinting);
+    </script>
+</body>
+</html>

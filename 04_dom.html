@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docjjument</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+  function addLanguage(LangName) {
+    const li = document.createElement('li');
+    li.innerHTML = `${LangName}`; // Use backticks (`) for template literals
+    document.querySelector('.language').appendChild(li);
+}
+
+addLanguage("python"); // Don't forget the semicolon at the end
+addLanguage("typescript");
+
+function opti(LangName)
+{
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(LangName));
+    document.querySelector('.language').appendChild(li);
+}
+opti("C++")
+
+//edit
+
+const second = document.querySelector("li:nth-child(2)");
+console.log(second);
+const newl = document.createElement('li');
+newl.textContent = "mojo";
+second.replaceWith(newl);
+
+const first = document.querySelector("li:first-child");
+first.outerHTML = '<li>TYPESCRIPT</li>'
+
+//remove
+
+const last = document.querySelector("li:last-child");
+last.remove();
+
+
+
+</script>
+</html>
